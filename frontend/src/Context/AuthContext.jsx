@@ -1,4 +1,3 @@
-
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
@@ -36,7 +35,10 @@ export function AuthProvider({ children }) {
       return { success: true };
     } catch (err) {
       console.error("Login failed:", err.response?.data || err.message);
-      return { success: false, message: err.response?.data?.error || "Something went wrong" };
+      return {
+        success: false,
+        message: err.response?.data?.error || "Something went wrong",
+      };
     }
   };
 
