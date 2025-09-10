@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-
-
 /* 🔹 Global resets */
 * {
   margin: 0;
@@ -9,7 +7,9 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   width: 100%;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
