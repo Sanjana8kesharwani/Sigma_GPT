@@ -1,18 +1,16 @@
-
 import "./App.css";
 import Sidebar from "./Sidebar.jsx";
 import ChatWindow from "./ChatWindow.jsx";
 import { MyContext } from "./MyContext.jsx";
 import { useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// ✅ Auth Context
 import { AuthProvider } from "./Context/AuthContext.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import ProtectedRoute from "./Components/ProtectedRoute.jsx";
 
 function App() {
   const [prompt, setPrompt] = useState("");
@@ -41,11 +39,10 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          // ✅ Public routes 
+          // ✅ Public routes
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-
-         // ✅ Protected routes 
+          // ✅ Protected routes
           <Route
             path="/"
             element={
@@ -66,4 +63,3 @@ function App() {
 }
 
 export default App;
-
