@@ -21,10 +21,17 @@ You can access the live version of the project here:https://sigma-gpt-frontend-l
 - **Scalable Backend**: Node.js + Express + MongoDB for high performance.  
 
 ---
-
 ## 🛠️ Steps to Run Locally  
 
 1. **Clone the repository**  
    ```bash
    git clone https://github.com/<your-username>/sigmagpt.git
    cd sigmagpt
+
+# Install backend dependencies
+cd backend
+npm install
+
+# Install frontend dependencies
+cd ../frontend
+npm install
