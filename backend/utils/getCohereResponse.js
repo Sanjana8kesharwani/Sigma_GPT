@@ -3,12 +3,10 @@ import axios from "axios";
 const getCohereResponse = async (message) => {
   try {
     const response = await axios.post(
-      "https://api.cohere.ai/v1/generate",
+      "https://api.cohere.ai/v1/chat",
       {
-        model: "command",
-        prompt: message,
-        max_tokens: 100,
-        temperature: 0.7,
+        model: "command-r",
+        message: message,
       },
       {
         headers: {
@@ -18,9 +16,9 @@ const getCohereResponse = async (message) => {
       }
     );
 
-    return response.data.generations[0].text.trim();
+    return response.data.text;
   } catch (err) {
-    console.error("🔥 Cohere Error:", err.response?.data || err.message);
+    console.error("Cohere Error:", err.response?.data || err.message);
     return "Sorry, something went wrong!";
   }
 };
