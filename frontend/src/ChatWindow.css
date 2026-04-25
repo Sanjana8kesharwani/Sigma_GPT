@@ -92,14 +92,14 @@ input:focus {
   color: #b4b4b4;
 }
 
-/* 🔹 Mic button */
+/*  Mic button */
 #mic {
   cursor: pointer;
   height: 35px;
   width: 35px;
   font-size: 18px;
   position: absolute;
-  right: 55px; /* send ke left me */
+  right: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +110,7 @@ input:focus {
   color: #339cff;
 }
 
-/* 🔹 Jab mic listening mode me ho */
+
 .listening {
   color: #339cff !important;
   text-shadow: 0 0 8px rgba(51, 156, 255, 0.8);
@@ -145,5 +145,5 @@ input:focus {
 .rightControls {
   display: flex;
   align-items: center;
-  gap: 12px; /* ThemeToggle और User icon के बीच spacing */
+  gap: 12px; 
 }

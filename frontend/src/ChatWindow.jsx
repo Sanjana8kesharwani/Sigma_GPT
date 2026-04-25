@@ -70,7 +70,7 @@ function ChatWindow() {
     setPrompt("");
   }, [reply]);
 
-  // 🔹 Voice input function
+  //  Voice input function
   const startListening = () => {
     if (!("webkitSpeechRecognition" in window)) {
       alert("Your browser does not support voice recognition!");
@@ -86,7 +86,7 @@ function ChatWindow() {
 
     recognition.onresult = (event) => {
       const transcript = event.results[0][0].transcript;
-      setPrompt(transcript); // ✅ Directly set input value
+      setPrompt(transcript); 
     };
 
     recognition.start();
@@ -96,7 +96,7 @@ function ChatWindow() {
     setIsOpen(!isOpen);
   };
 
-  // ✅ Handle logout click
+  // Handle logout click
   const handleLogout = () => {
     logout();
     window.location.href = "/login";
