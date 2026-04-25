@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 // Your existing files
-import getCohereResponse from "./utils/getCohereResponse.js";
+import getAIResponse from "./utils/getAIResponse.js";
 import chatRoutes from "./routes/chat.js";
 
 import authRoutes from "./routes/auth.js";
