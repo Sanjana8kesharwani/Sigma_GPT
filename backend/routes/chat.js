@@ -1,6 +1,6 @@
 import express from "express";
 import Thread from "../models/Thread.js";
-import getCohereResponse from "../utils/getCohereResponse.js"; 
+import getAIResponse from "../utils/getAIResponse.js";
 
 
 const router = express.Router();
@@ -95,7 +95,7 @@ router.post("/chat", async (req, res) => {
       thread.messages.push({ role: "user", content: message });
     }
 
-   const assistantReply = await getCohereResponse(message);
+   const assistantReply = await getAIResponse(message);
 
 
     thread.messages.push({ role: "assistant", content: assistantReply });

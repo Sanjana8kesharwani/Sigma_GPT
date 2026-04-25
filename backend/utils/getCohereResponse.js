@@ -1,26 +1,28 @@
 import axios from "axios";
 
-const getCohereResponse = async (message) => {
+const getAIResponse = async (message) => {
   try {
     const response = await axios.post(
-      "https://api.cohere.ai/v1/chat",
+      "https://api.groq.com/openai/v1/chat/completions",
       {
-        model: "command-r-plus", 
-        message: message,
+        model: "llama3-8b-8192",
+        messages: [
+          { role: "user", content: message }
+        ],
       },
       {
         headers: {
-          Authorization: `Bearer ${process.env.COHERE_API_KEY}`,
+          Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
           "Content-Type": "application/json",
         },
       }
     );
 
-    return response.data.text;
+    return response.data.choices[0].message.content;
   } catch (err) {
-    console.error(" Cohere Error:", err.response?.data || err.message);
+    console.error(" Groq Error:", err.response?.data || err.message);
     return "Sorry, something went wrong!";
   }
 };
 
-export default getCohereResponse;
+export default getAIResponse;
