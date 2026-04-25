@@ -5,7 +5,7 @@ const getAIResponse = async (message) => {
     const response = await axios.post(
       "https://api.groq.com/openai/v1/chat/completions",
       {
-        model: "llama3-70b-8192",   
+        model: "llama-3.1-8b-instant", // ✅ working model
         messages: [
           { role: "user", content: message }
         ],
@@ -20,7 +20,7 @@ const getAIResponse = async (message) => {
 
     return response.data.choices[0].message.content;
   } catch (err) {
-    console.error(" Groq Error:", err.response?.data || err.message);
+    console.error("🔥 Groq Error:", err.response?.data || err.message);
     return "Sorry, something went wrong!";
   }
 };
