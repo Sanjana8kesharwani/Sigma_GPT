@@ -25,7 +25,6 @@ body {
   line-height: 1.6;
 }
 
-/* Background with gradient */
 .auth-container {
   min-height: 100vh;
   display: flex;
@@ -35,7 +34,6 @@ body {
   padding: 20px;
 }
 
-/* White box with subtle shadow */
 .auth-box {
   background: #ffffff;
   border-radius: var(--border-radius);
@@ -173,16 +171,17 @@ body {
 
 @keyframes spin {
   to {
-    transform: rotate(360deg);
+    transform: translate(360deg);
   }
 }
 
+/*  UPDATED ERROR */
 .error-message {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: rgba(230, 57, 70, 0.1);
-  color: var(--error-color);
+  background-color: rgba(230, 57, 70, 0.2);
+  color: #b91c1c;
   padding: 12px;
   border-radius: 8px;
   margin-top: 1.5rem;
@@ -203,10 +202,11 @@ body {
   }
 }
 
+/* UPDATED FOOTER */
 .auth-footer {
   margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: var(--text-color); 
 }
 
 .auth-link {
@@ -221,7 +221,6 @@ body {
   color: var(--primary-dark);
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
   .auth-box {
     padding: 1.5rem;
