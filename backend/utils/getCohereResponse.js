@@ -5,7 +5,7 @@ const getCohereResponse = async (message) => {
     const response = await axios.post(
       "https://api.cohere.ai/v1/chat",
       {
-        model: "command-r",
+        model: "command", 
         message: message,
       },
       {
@@ -18,7 +18,7 @@ const getCohereResponse = async (message) => {
 
     return response.data.text;
   } catch (err) {
-    console.error("Cohere Error:", err.response?.data || err.message);
+    console.error(" Cohere Error:", err.response?.data || err.message);
     return "Sorry, something went wrong!";
   }
 };
