@@ -85,7 +85,7 @@ const Login = () => {
           )}
         </form>
 
-        <div className="auth-footer">
+        <div className="auth-footer text-black">
           <p>
             Don't have an account?{" "}
             <a href="/signup" className="auth-link">
