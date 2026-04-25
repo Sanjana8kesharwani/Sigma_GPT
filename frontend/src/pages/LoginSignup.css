@@ -44,7 +44,8 @@ body {
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
-  
+  animation: fadeIn 0.5s ease-out;
+  border: 1px solid #e5e7eb; 
 }
 
 @keyframes fadeIn {
@@ -180,13 +181,13 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: rgba(230, 57, 70, 0.2);
-  color: #b91c1c;
+  background-color: #fee2e2;   
+  color: #991b1b;            
   padding: 12px;
   border-radius: 8px;
   margin-top: 1.5rem;
   font-size: 0.9rem;
-  animation: shake 0.5s;
+  font-weight: 500;
 }
 
 @keyframes shake {
@@ -206,7 +207,7 @@ body {
 .auth-footer {
   margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: #111;   
+  color: #000; 
 }
 
 .auth-link {
