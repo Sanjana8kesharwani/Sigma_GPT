@@ -5,7 +5,7 @@ const getCohereResponse = async (message) => {
     const response = await axios.post(
       "https://api.cohere.ai/v1/chat",
       {
-        model: "command", 
+        model: "command-r-plus", 
         message: message,
       },
       {
