@@ -206,14 +206,12 @@ body {
 .auth-footer {
   margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: var(--text-color); 
+  color: #111;   
 }
 
 .auth-link {
-  color: var(--primary-color);
-  text-decoration: none;
+  color: #2563eb;
   font-weight: 600;
-  transition: var(--transition);
 }
 
 .auth-link:hover {
